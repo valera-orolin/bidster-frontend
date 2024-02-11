@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-gradient {
+    background: linear-gradient(45deg, theme('colors.my-orange'), theme('colors.my-pink'), theme('colors.my-lila'), theme('colors.my-aqua'), theme('colors.my-orange'), theme('colors.my-orange'));
+}
+
+.my-gradient-text {
+    background: linear-gradient(45deg, theme('colors.my-orange'), theme('colors.my-pink'), theme('colors.my-lila'), theme('colors.my-aqua'), theme('colors.my-orange'), theme('colors.my-orange'));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
