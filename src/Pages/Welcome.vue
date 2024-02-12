@@ -1,5 +1,6 @@
 <script setup>
 import NavPanel from '../Components/NavPanel.vue';
+import ButtonArrow from '../Components/ButtonArrow.vue';
 </script>
 
 <template>
@@ -16,13 +17,30 @@ import NavPanel from '../Components/NavPanel.vue';
         <div class="w-7/12 bg-my-black p-10 flex justify-between items-start relative">
             <div class="w-3/4">
                 <div class="text-my-gray4 text-5xl font-bold mt-28 leading-tight">
-                    Supercharge your financial analytics with
+                    Buy and sell anything securely with
                     <span class="my-gradient-text">Bidster</span>
                 </div>
-                <div class="text-my-gray3 text-base font-light mt-10">
-                    Unlock the future of financial decision-making with our AI-powered
-                    analytics platform.
+
+                <div class="text-my-gray3 text-sm tracking-widest font-light mt-12">With Bidster Ethereum smart contracts you can be sure that every auction is fair, verifiable, and immutable. No intermediaries, no fees, no hassle.</div>
+
+                <ButtonArrow text="Check out lots" class="mt-12 text-sm" />
+
+                <div class="flex justify-between mt-12 text-my-gray4">
+                    <div class="w-1/3 text-center border-r border-my-gray2">
+                        <h1 class="text-2xl font-bold my-gradient-text">100K</h1>
+                        <p class="font-light text-sm mt-2">Completed auctions</p>
+                    </div>
+                    <div class="w-1/3 text-center border-r border-my-gray2">
+                        <h1 class="text-2xl font-bold my-gradient-text">67K</h1>
+                        <p class="font-light text-sm mt-2">Active users</p>
+                    </div>
+                    <div class="w-1/3 text-center">
+                        <h1 class="text-2xl font-bold my-gradient-text">70+</h1>
+                        <p class="font-light text-sm mt-2">Global partners</p>
+                    </div>
                 </div>
+
+                <div class="text-my-gray3 text-lg mt-20 font-bold">Our honorable <span class="my-gradient-text">clients & partners</span></div>
             </div>
             <NavPanel class="absolute right-28 top-10" />
         </div>

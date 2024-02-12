@@ -4,10 +4,10 @@ import ButtonGradient from '../Components/ButtonGradient.vue';
 
 <template>
     <div class="flex space-x-8 text-my-gray4 text-sm items-center font-light">
-        <a href="#">Home</a>
-        <a href="#">Pages</a>
-        <a href="#">Feature</a>
-        <a href="#">Cart</a>
-        <ButtonGradient />
+        <a href="#" class="hover:text-my-lila transition duration-500">Home</a>
+        <a href="#" class="hover:text-my-lila transition duration-500">Pages</a>
+        <a href="#" class="hover:text-my-lila transition duration-500">Feature</a>
+        <a href="#" class="hover:text-my-lila transition duration-500">Cart</a>
+        <ButtonGradient text="Sign in" />
     </div>
 </template>
