@@ -5,7 +5,7 @@ import Footer from '../Components/Footer.vue';
 
 <template>
     <div class="h-screen bg-my-black">
-        <!---<NavPanel />-->
+        <NavPanel />
 
         <div class="px-4 md:px-32 py-8 bg-my-black">
             <main>
@@ -13,7 +13,6 @@ import Footer from '../Components/Footer.vue';
             </main>
         </div>
 
-        <!---
-        <Footer />-->
+        <Footer />
     </div>
 </template>
