@@ -2,12 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+#app {
+    font-family: 'Sora', sans-serif;
+}
+
 .my-gradient {
-    background: linear-gradient(45deg, theme('colors.my-orange'), theme('colors.my-pink'), theme('colors.my-lila'), theme('colors.my-aqua'), theme('colors.my-orange'), theme('colors.my-orange'));
+    background: linear-gradient(224deg, theme('colors.primary2') 15%, theme('colors.primary3') 34%, theme('colors.primary4') 58%, theme('colors.primary5') 77%, theme('colors.primary2') 96%);
 }
 
 .my-gradient-text {
-    background: linear-gradient(45deg, theme('colors.my-orange'), theme('colors.my-pink'), theme('colors.my-lila'), theme('colors.my-aqua'), theme('colors.my-orange'), theme('colors.my-orange'));
+    background: linear-gradient(224deg, theme('colors.primary2') 15%, theme('colors.primary3') 34%, theme('colors.primary4') 58%, theme('colors.primary5') 77%, theme('colors.primary2') 96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.my-gradient-button {
+    background: 
+      linear-gradient(theme('colors.my-black'), theme('colors.my-black')) padding-box,
+      linear-gradient(224deg, theme('colors.primary2') 15%, theme('colors.primary3') 34%, theme('colors.primary4') 58%, theme('colors.primary5') 77%, theme('colors.primary2') 96%) border-box;
+    display: inline-block;
 }

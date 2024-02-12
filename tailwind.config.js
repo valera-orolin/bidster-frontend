@@ -18,7 +18,16 @@ export default {
                 'my-violet': '#9F53FF',
                 'my-pink': '#FF98E2',
                 'my-velvet': '#591952',
+                'rimary1': '#AC6AFF',
+                'primary2': '#FFC876',
+                'primary3': '#79FFF7',
+                'primary4': '#9F53FF',
+                'primary5': '#FF98E2',
+                'primary6': '#591952',
             },
+            scale: {
+                '180': '1.80',
+            }
         },
       },
     plugins: [],
