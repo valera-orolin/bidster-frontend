@@ -8,7 +8,8 @@ export default {
         extend: {
             colors: {
                 'my-black': '#130D1B',
-                'my-gray1': '#252134',
+                //'my-gray1': '#252134',
+                'my-gray1': '#F15D44',
                 'my-gray2': '#262131',
                 'my-gray3': '#D8D8D9',
                 'my-gray4': '#FAFAFA',
@@ -27,6 +28,9 @@ export default {
             },
             scale: {
                 '180': '1.80',
+            },
+            borderWidth: {
+                '0.5': '0.5px'
             }
         },
       },

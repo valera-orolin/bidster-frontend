@@ -1,6 +1,7 @@
 <script setup>
 import NavPanel from '../Components/NavPanel.vue';
 import ButtonArrow from '../Components/ButtonArrow.vue';
+import ButtonGradient from '../Components/ButtonGradient.vue';
 </script>
 
 <template>
@@ -23,9 +24,11 @@ import ButtonArrow from '../Components/ButtonArrow.vue';
 
                 <div class="text-my-gray3 text-sm tracking-widest font-light mt-12">With Bidster Ethereum smart contracts you can be sure that every auction is fair, verifiable, and immutable. No intermediaries, no fees, no hassle.</div>
 
-                <ButtonArrow text="Check out lots" class="mt-12 text-sm" />
+                <router-link to="/lots">
+                    <ButtonArrow text="Check out lots" class="mt-12 text-sm" />
+                </router-link>
 
-                <div class="flex justify-between mt-12 text-my-gray4">
+                <div class="flex justify-between mt-12 text-my-gray3">
                     <div class="w-1/3 text-center border-r border-my-gray2">
                         <h1 class="text-2xl font-bold my-gradient-text">100K</h1>
                         <p class="font-light text-sm mt-2">Completed auctions</p>
@@ -40,9 +43,20 @@ import ButtonArrow from '../Components/ButtonArrow.vue';
                     </div>
                 </div>
 
-                <div class="text-my-gray3 text-lg mt-20 font-bold">Our honorable <span class="my-gradient-text">clients & partners</span></div>
+                <div class="text-my-gray4 text-lg mt-20 font-bold">Our honorable <span class="my-gradient-text">clients & partners</span></div>
             </div>
-            <NavPanel class="absolute right-28 top-10" />
+
+            <div class="absolute right-28 top-10" >
+                <div class="flex space-x-8 text-my-gray4 text-sm items-center font-light">
+                    <a href="#" class="hover:text-my-lila transition duration-500">Home</a>
+                    <a href="#" class="hover:text-my-lila transition duration-500">Pages</a>
+                    <a href="#" class="hover:text-my-lila transition duration-500">Feature</a>
+                    <a href="#" class="hover:text-my-lila transition duration-500">Cart</a>
+                    <ButtonGradient text="Sign in" />
+                </div>
+            </div>
+            <!--
+            <NavPanel class="absolute right-28 top-10" />-->
         </div>
     </div>
 </template>
