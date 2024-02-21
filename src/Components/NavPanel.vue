@@ -9,7 +9,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-    <div class="bg-my-black flex items-center justify-between px-4 md:px-32 py-4 lg:py-8">
+    <div class="bg-my-black flex items-center justify-between px-4 md:px-32 py-4 lg:py-6">
         <router-link to="/lots">
             <img src="../assets/logo.svg" alt="Bidster" />
         </router-link>
@@ -26,7 +26,7 @@ const toggleMenu = () => {
 
         <div class="lg:hidden inline-flex items-center justify-center space-x-4">
             <router-link to="/login">
-                <font-awesome-icon class="text-my-gray3" :icon="['fas', 'user']" />
+                <font-awesome-icon class="text-my-gray3" :icon="['fas', 'right-to-bracket']" />
             </router-link>
             <button @click="toggleMenu" data-collapse-toggle="navbar-hamburger" type="button" class="items-center justify-center p-2 w-10 h-10 text-sm text-my-gray3 rounded-lg focus:outline-none focus:ring-2 focus:ring-my-gray2" aria-controls="navbar-hamburger" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
