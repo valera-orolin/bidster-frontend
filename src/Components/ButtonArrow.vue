@@ -12,7 +12,7 @@ const props = defineProps({
 
 <style>
 .my-arrow-button {
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: theme('colors.my-gray2');
     border: none;
     color: #fff;

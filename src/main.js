@@ -6,10 +6,10 @@ import './style.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
 
 
-library.add(faGithub, faLinkedinIn, faEnvelope)
+library.add(faGithub, faLinkedinIn, faEnvelope, faUser)
 
 createApp(App)
     .use(router)

@@ -4,10 +4,10 @@ import Footer from '../Components/Footer.vue';
 </script>
 
 <template>
-    <div class="h-screen bg-my-black">
+    <div class="flex flex-col h-screen bg-my-black">
         <NavPanel />
 
-        <div class="px-4 md:px-32 py-8 bg-my-black">
+        <div class="p-4 md:px-32 md:py-8 bg-my-black flex-grow">
             <main>
                 <slot />
             </main>

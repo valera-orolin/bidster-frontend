@@ -10,7 +10,8 @@ export default {
                 'my-black': '#130D1B',
                 //'my-gray1': '#252134',
                 'my-gray1': '#F15D44',
-                'my-gray2': '#262131',
+                //'my-gray2': '#262131',
+                'my-gray2': '#252134',
                 'my-gray3': '#D8D8D9',
                 'my-gray4': '#FAFAFA',
                 'my-lila': '#AC6AFF',
@@ -31,6 +32,9 @@ export default {
             },
             borderWidth: {
                 '0.5': '0.5px'
+            },
+            ringWidth: {
+                '0.5': '0.5px',
             }
         },
       },
