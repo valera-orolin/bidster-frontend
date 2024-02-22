@@ -8,7 +8,7 @@ import ButtonGradient from '../Components/ButtonGradient.vue';
     <div class="flex h-screen">
         <div class="w-5/12 my-gradient p-10 pl-28 flex justify-start">
             <div class="relative">
-                <img src="../assets/logo-dark.svg" alt="Bidster" />
+                <img src="../assets/logo-dark.png" alt="Bidster" class="h-8" />
                 <div class="absolute bottom-0 left-0">
                     <img class="scale-150 translate-x-10 -translate-y-20" src="../assets/element1.svg" alt="" />
                     <img class="scale-180 transform translate-x-40 -translate-y-48" src="../assets/element2.svg" alt="" />

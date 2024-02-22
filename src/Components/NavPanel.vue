@@ -11,7 +11,7 @@ const toggleMenu = () => {
 <template>
     <div class="bg-my-black flex items-center justify-between px-4 md:px-32 py-4 lg:py-6">
         <router-link to="/lots">
-            <img src="../assets/logo.svg" alt="Bidster" />
+            <img src="../assets/logo.png" alt="Bidster" class="h-8"/>
         </router-link>
 
         <div class="lg:flex hidden space-x-8 text-my-gray4 text-sm items-center font-ligh justify-end">

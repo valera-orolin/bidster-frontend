@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <button class="bg-transparent border border-transparent rounded-2xl px-7 py-3 hover:text-my-aqua hover:shadow-teal-400 hover:shadow-inner transition duration-500 my-gradient-button">
+    <button class="bg-transparent border-2 border-transparent rounded-2xl px-7 py-3 hover:text-my-aqua hover:shadow-teal-400 hover:shadow-inner transition duration-500 my-gradient-button">
         <span>{{ text }}</span>
     </button>
 </template>

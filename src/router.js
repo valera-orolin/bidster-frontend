@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Lots from './Pages/Lots/Index.vue'
 import Login from './Pages/Auth/Login.vue'
 import Register from './Pages/Auth/Register.vue'
+import VerifyEmail from './Pages/Auth/VerifyEmail.vue'
 import Welcome from './Pages/Welcome.vue'
 
 const routes = [
@@ -10,6 +11,7 @@ const routes = [
     { path: '/lots', component: Lots },
     { path: '/login', component: Login },
     { path: '/register', component: Register },
+    { path: '/verify-email', component: VerifyEmail },
 ]
 
 const router = createRouter({

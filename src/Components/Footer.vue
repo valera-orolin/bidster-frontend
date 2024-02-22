@@ -3,7 +3,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <div>
                 <router-link to="/lots">
-                    <img src="../assets/logo.svg" alt="Bidster" />
+                    <img src="../assets/logo.png" alt="Bidster" class="h-8"/>
                 </router-link>
                 <p class="text-sm mt-4">Your trusted platform for online auctions.</p>
             </div>
