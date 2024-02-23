@@ -35,7 +35,15 @@ export default {
             },
             ringWidth: {
                 '0.5': '0.5px',
-            }
+            },
+            spacing: {
+                '0.5': '0.125rem',
+            },
+            height: {
+                '128': '32rem',
+                '112': '28rem',
+                '104': '26rem',
+            },
         },
       },
     plugins: [],
