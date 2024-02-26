@@ -1,5 +1,6 @@
 <script setup>
 import Message from './Message.vue';
+import MessageForm from './MessageForm.vue';
 import { ref, onMounted, onUpdated, nextTick} from 'vue';
 
 const scrollContainer = ref(null);
@@ -162,6 +163,8 @@ const messages = [
             <font-awesome-icon :icon="['fas', 'chevron-down']" />
         </button>
     </div>
+
+    <MessageForm />
 </template>
 
 <style>
