@@ -40,6 +40,7 @@ export default {
                 '0.5': '0.125rem',
             },
             height: {
+                '200': '50rem',
                 '128': '32rem',
                 '112': '28rem',
                 '104': '26rem',

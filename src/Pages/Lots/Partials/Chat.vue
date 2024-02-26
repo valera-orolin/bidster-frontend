@@ -1,5 +1,25 @@
 <script setup>
 import Message from './Message.vue';
+import { ref, onMounted, onUpdated, nextTick} from 'vue';
+
+const scrollContainer = ref(null);
+const isAtBottom = ref(true);
+
+onMounted(async () => {
+    await nextTick();
+    scrollContainer.value.scrollTop = scrollContainer.value.scrollHeight;
+    scrollContainer.value.addEventListener('scroll', handleScroll);
+});
+
+const handleScroll = () => {
+    const { scrollTop, scrollHeight, clientHeight } = scrollContainer.value;
+    isAtBottom.value = Math.abs(scrollTop + clientHeight - scrollHeight) < 300;
+};
+
+const scrollToBottom = () => {
+    scrollContainer.value.scrollTop = scrollContainer.value.scrollHeight;
+    isAtBottom.value = true;
+};
 
 const messages = [
     {
@@ -132,9 +152,20 @@ const messages = [
 </script>
 
 <template>
-    <div class="border-2 border-transparent rounded-2xl my-gradient-bord-black p-4 lg:p-12 text-my-gray4">
-        <Message v-for="message in messages"
-                :key="message.id"
-                :message="message" />
+    <div class="relative border-2 border-transparent rounded-2xl my-gradient-bord-black text-my-gray4 h-200">
+        <div class="overflow-auto h-full flex flex-col scrollbar-hide p-4 lg:p-12" ref="scrollContainer">
+            <Message v-for="message in messages"
+                    :key="message.id"
+                    :message="message" />
+        </div>
+        <button v-if="!isAtBottom" class="absolute bottom-4 right-4 bg-my-gray2 text-my-gray3 rounded-full text-lg py-2 px-3" @click="scrollToBottom">
+            <font-awesome-icon :icon="['fas', 'chevron-down']" />
+        </button>
     </div>
 </template>
+
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+</style>
