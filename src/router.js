@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Lots from './Pages/Lots/Index.vue'
 import Lot from './Pages/Lots/Show.vue'
+import CreateLot from './Pages/Lots/Create.vue'
 import Login from './Pages/Auth/Login.vue'
 import Register from './Pages/Auth/Register.vue'
 import VerifyEmail from './Pages/Auth/VerifyEmail.vue'
@@ -10,6 +11,7 @@ const routes = [
     { path: '/', component: Welcome },
     { path: '/welcome', component: Welcome },
     { path: '/lots', component: Lots },
+    { path: '/lots/create', component: CreateLot },
     { path: '/lots/:id', component: Lot },
     { path: '/login', component: Login },
     { path: '/register', component: Register },

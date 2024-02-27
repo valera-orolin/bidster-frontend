@@ -47,6 +47,7 @@ export default {
                 '104': '26rem',
             },
             width: {
+                '260': '65rem',
                 '200': '50rem',
             },
             translate: {
