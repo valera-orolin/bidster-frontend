@@ -34,7 +34,7 @@ const messages = [
     },
     {
         user: {
-            name: 'Alice',
+            name: 'Alice Doe',
             is_current: false,
             is_seller: true,
         },
@@ -61,7 +61,7 @@ const messages = [
     },
     {
         user: {
-            name: 'Alice',
+            name: 'Alice Doe',
             is_current: false,
             is_seller: true,
         },
@@ -97,7 +97,7 @@ const messages = [
     },
     {
         user: {
-            name: 'Alice',
+            name: 'Alice Doe',
             is_current: false,
             is_seller: true,
         },
@@ -115,7 +115,7 @@ const messages = [
     },
     {
         user: {
-            name: 'Alice',
+            name: 'Alice Doe',
             is_current: false,
             is_seller: true,
         },
@@ -142,7 +142,7 @@ const messages = [
     },
     {
         user: {
-            name: 'Alice',
+            name: 'Alice Doe',
             is_current: false,
             is_seller: true,
         },
@@ -153,7 +153,7 @@ const messages = [
 </script>
 
 <template>
-    <div class="relative border-2 border-transparent rounded-2xl my-gradient-bord-black text-my-gray4 h-200">
+    <div class="relative border-2 border-transparent rounded-2xl my-gradient-bord-black text-my-gray4 h-160 lg:h-200">
         <div class="overflow-auto h-full flex flex-col scrollbar-hide p-4 lg:p-12" ref="scrollContainer">
             <Message v-for="message in messages"
                     :key="message.id"

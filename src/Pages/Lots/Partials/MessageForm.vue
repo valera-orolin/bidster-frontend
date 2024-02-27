@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
                                 <font-awesome-icon :icon="['fas', 'face-smile']" />
                             </div>
                             <emoji-picker v-show="showEmojiPicker" @emoji-click="addEmoji"
-                                class="absolute top-0 left-0 transform -translate-y-full -translate-x-full mt-1 shadow-2xl"></emoji-picker>
+                                class="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-88 md:-translate-x-full mt-1 shadow-2xl scale-75 md:scale-100"></emoji-picker>
                         </div>
                     </div>
                     <Button text="Send message" />
