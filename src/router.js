@@ -6,6 +6,7 @@ import Login from './Pages/Auth/Login.vue'
 import Register from './Pages/Auth/Register.vue'
 import VerifyEmail from './Pages/Auth/VerifyEmail.vue'
 import Welcome from './Pages/Welcome.vue'
+import Profile from './Pages/Profile/Show.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/login', component: Login },
     { path: '/register', component: Register },
     { path: '/verify-email', component: VerifyEmail },
+    { path: '/profile', component: Profile },
 ]
 
 const router = createRouter({

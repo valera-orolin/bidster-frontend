@@ -15,9 +15,7 @@ const toggleMenu = () => {
         </router-link>
 
         <div class="lg:flex hidden space-x-8 text-my-gray4 text-base items-center font-ligh justify-end">
-            <a href="#" class="hover:text-my-lila transition duration-500">Home</a>
-            <a href="#" class="hover:text-my-lila transition duration-500">Pages</a>
-            <a href="#" class="hover:text-my-lila transition duration-500">Feature</a>
+            <router-link to="/profile" class="hover:text-my-lila transition duration-500">Profile</router-link>
             <router-link to="/lots/create" class="hover:text-my-lila transition duration-500">Create Auction</router-link>
             <router-link to="/login">
                 <ButtonGradient text="Sign in" />
