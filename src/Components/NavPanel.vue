@@ -14,7 +14,7 @@ const toggleMenu = () => {
             <img src="../assets/logo.png" alt="Bidster" class="h-8"/>
         </router-link>
 
-        <div class="lg:flex hidden space-x-8 text-my-gray4 text-sm items-center font-ligh justify-end">
+        <div class="lg:flex hidden space-x-8 text-my-gray4 text-base items-center font-ligh justify-end">
             <a href="#" class="hover:text-my-lila transition duration-500">Home</a>
             <a href="#" class="hover:text-my-lila transition duration-500">Pages</a>
             <a href="#" class="hover:text-my-lila transition duration-500">Feature</a>

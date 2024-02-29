@@ -37,8 +37,8 @@ const removeCharacteristic = (index) => {
 <template>
     <AuthenticatedLayout>
         <div class="flex justify-center">
-            <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-260">
-                <div class="text-my-gray4 text-5xl font-bold leading-tight mb-10">
+            <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-full lg:w-260">
+                <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-10">
                     Create your own auction at
                     <span class="my-gradient-text">Bidster</span>
                 </div>
@@ -91,17 +91,17 @@ const removeCharacteristic = (index) => {
                         <div>
                             <InputLabel for="images" value="Images" />
 
-                            <div class="file-upload mt-7">
+                            <div class="file-upload mt-3 flex flex-col md:flex-row md:items-center">
                                 <input type="file" id="images" class="file-input hidden" accept="image/*" multiple @change="updateFileLabel">
-                                <label for="images" class="file-label bg-my-black p-5 rounded-full cursor-pointer">Select images</label>
-                                <span class="file-count-label ml-6 text-my-gray3">Images selected: {{ fileCount }}</span>
+                                <label for="images" class="file-label bg-my-black p-5 rounded-full cursor-pointer w-fit">Select images</label>
+                                <span class="file-count-label mt-2 md:mt-0 md:ml-6 text-my-gray3">Images selected: {{ fileCount }}</span>
                             </div>
 
                             <InputError class="mt-2" :message="''" />
                         </div>
 
                         <div>
-                            <InputLabel for="end-date" value="End date" class="mt-11" />
+                            <InputLabel for="end-date" value="End date" />
 
                             <TextInput
                                 id="end-date"
@@ -130,7 +130,7 @@ const removeCharacteristic = (index) => {
                             <InputError class="mt-2" :message="''" />
                         </div>
 
-                        <div class="flex flex-row space-x-6">
+                        <div class="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:space-x-6">
                             <div>
                                 <InputLabel for="category" value="Category" />
                                 <select id="category" v-model="selectedCategory" required class="w-64 p-5 rounded-full transition duration-500 bg-my-black mt-3 focus:outline-none">
@@ -148,35 +148,28 @@ const removeCharacteristic = (index) => {
 
                         <div>
                             <InputLabel for="characteristics" value="Characteristics" />
-                            <table class="mt-3">
-                                <tr v-for="(characteristic, index) in characteristics" :key="index">
-                                    <td>
-                                        <TextInput
-                                            type="text"
-                                            class="w-96"
-                                            v-model="characteristic.name" 
-                                            placeholder="Name" 
-                                            required
-                                            :colorsInversed="true"
-                                        />
-                                    </td>
-                                    <td>
-                                        <TextInput
-                                            type="text"
-                                            class="w-96"
-                                            v-model="characteristic.value" 
-                                            placeholder="Value"
-                                            required
-                                            :colorsInversed="true"
-                                        />
-                                    </td>
-                                    <td>
-                                        <button type="button" @click="removeCharacteristic(index)" class="text-4xl">×</button>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="mt-3 flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:items-center lg:space-x-4 items-start" v-for="(characteristic, index) in characteristics" :key="index">
+                                <TextInput
+                                    type="text"
+                                    class="w-64 md:w-96"
+                                    v-model="characteristic.name" 
+                                    placeholder="Name" 
+                                    required
+                                    :colorsInversed="true"
+                                />
+                                <TextInput
+                                    type="text"
+                                    class="w-64 md:w-96"
+                                    v-model="characteristic.value" 
+                                    placeholder="Value"
+                                    required
+                                    :colorsInversed="true"
+                                />
+                                <button type="button" @click="removeCharacteristic(index)" class="text-4xl hover:text-my-lila transition duration-500">×</button>
+                            </div>
                             <ButtonWhite type="button" @click="addCharacteristic" class="mt-3" text="Add characteristic"/>
                         </div>
+
                     </div>
 
                     <ButtonGradient class="mt-10" :text="'Create auction'" />
