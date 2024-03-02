@@ -50,6 +50,7 @@ export default {
                 '260': '65rem',
                 '200': '50rem',
                 '160': '40rem',
+                '140': '35rem',
             },
             translate: {
                 '88': '22rem',
