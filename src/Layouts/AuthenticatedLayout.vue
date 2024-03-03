@@ -26,7 +26,7 @@ const props = defineProps({
             </div>
         </template>
 
-        <div v-bind:class="{'p-4 md:px-32 md:pb-16 pt-24 md:pt-36 bg-my-black flex-grow': true, 'pt-4 md:pt-14': headerText}">
+        <div v-bind:class="{'md:px-32 p-4 md:pb-16 bg-my-black flex-grow': true, 'md:pb-16 pt-24 md:pt-36': !headerText, 'pt-4 md:pt-16': headerText}">
             <main>
                 <slot />
             </main>

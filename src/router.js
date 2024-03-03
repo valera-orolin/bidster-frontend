@@ -8,6 +8,7 @@ import VerifyEmail from './Pages/Auth/VerifyEmail.vue'
 import Welcome from './Pages/Welcome.vue'
 import Profile from './Pages/Profile/Show.vue'
 import Auctions from './Pages/Auctions/Index.vue'
+import LotsEdit from './Pages/Lots/Edit.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -20,6 +21,7 @@ const routes = [
     { path: '/verify-email', component: VerifyEmail },
     { path: '/profile', component: Profile },
     { path: '/auctions', component: Auctions },
+    { path: '/lots-edit', component: LotsEdit },
 ]
 
 const router = createRouter({

@@ -1,9 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
-const model = defineModel({
-    required: true,
-});
+const model = ref('');
 
 const input = ref(null);
 
@@ -11,10 +9,15 @@ const props = defineProps({
     colorsInversed: {
         type: Boolean,
         default: false
+    },
+    defaultValue: {
+        type: String,
+        default: ''
     }
 })
 
 onMounted(() => {
+    model.value = props.defaultValue;
     if (input.value.hasAttribute('autofocus')) {
         input.value.focus();
     }
