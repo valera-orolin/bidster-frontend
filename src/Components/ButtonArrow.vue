@@ -1,11 +1,17 @@
 <script setup>
 const props = defineProps({
-    text: String
+    text: String,
+    colorsInversed: Boolean
 });
 </script>
 
 <template>
-    <button class="text-my-gray4 my-arrow-button">
+    <button :class="[
+            'my-arrow-button text-my-gray4',
+            props.colorsInversed ? 
+            'reversed' : 
+            ''
+        ]" class="my-arrow-button">
         <span>{{ text }}</span>
     </button>
 </template>
@@ -21,6 +27,10 @@ const props = defineProps({
     width: 220px;
     transition: all 0.5s;
     cursor: pointer;
+}
+
+.my-arrow-button.reversed {
+    background-color: theme('colors.my-black');
 }
 
 .my-arrow-button {
@@ -43,6 +53,10 @@ const props = defineProps({
     top: 6px;
     right: -30px;
     transition: 0.5s;
+}
+
+.my-arrow-button.reversed:after {
+    background-color: theme('colors.my-black');
 }
 
 .my-arrow-button:hover{
