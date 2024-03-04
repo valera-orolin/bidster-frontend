@@ -212,7 +212,7 @@ const removeCharacteristic = (id) => {
                 <ButtonWhite type="button" @click="addCharacteristic" class="mt-3" text="Add characteristic"/>
             </div>
         </div>
-        <ButtonGradient class="mt-10" :text="'Create auction'" />
+        <ButtonGradient class="mt-10" :text="'Edit auction'" />
     </form>
 
     <div v-if="showImageViewer" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
