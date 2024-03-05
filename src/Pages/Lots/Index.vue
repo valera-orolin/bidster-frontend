@@ -1,7 +1,7 @@
 <script setup>
-import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue'
-import Lot from './Partials/Lot.vue'
-import { ref } from 'vue';
+import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
+import Lot from './Partials/Lot.vue';
+import { ref, watch } from 'vue';
 
 const lots = ref([
   { id: 1, title: 'MacBook Pro 14', description: 'The laptop is new. Got it from a reseller from Poland.', category: 'Electronics, Laptops', bids_count: '18', max_bid: '340', image: 'https://image.cnbcfm.com/api/v1/image/106452529-1584646955287macbook-air-2020-10.png?v=1584647237&w=929&h=523&vtcrop=y' },
@@ -18,9 +18,9 @@ const lots = ref([
 </script>
 
 <template>
-    <AuthenticatedLayout>
-      <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <Lot v-for="lot in lots" :key="lot.id" :lot="lot" />
-      </div>
+    <AuthenticatedLayout :mainPage="true">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <Lot v-for="lot in lots" :key="lot.id" :lot="lot" />
+        </div>
     </AuthenticatedLayout>
 </template>
