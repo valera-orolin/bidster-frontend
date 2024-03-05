@@ -38,6 +38,7 @@ const lot = {
   starting_price: '100', 
   address: 'Minsk, Central', 
   publication_date: 'Today, 14:11', 
+  end_date: '2024-07-01', 
   images: [
     'https://image.cnbcfm.com/api/v1/image/106452529-1584646955287macbook-air-2020-10.png?v=1584647237&w=929&h=523&vtcrop=y',
     'https://mobistore.by/files/uploads/Apple_MacBook_Pro_14_M1_Max/apple-14-mbp-intro2.jpg',
@@ -84,7 +85,8 @@ const person = {
                 <h2 class="text-2xl lg:text-4xl font-bold">{{ lot.title }}</h2>
 
                 <p class="text-base font-light text-my-gray3 mt-3">{{ lot.address }}</p>
-                <p class="text-base font-light text-my-gray3 mt-1">{{ lot.publication_date }}</p>
+                <p class="text-base font-light text-my-gray3 mt-1">Starting: {{ lot.publication_date }}</p>
+                <p class="text-base font-light text-my-gray3 mt-1">Ending: {{ lot.end_date }}</p>
 
                 <p class="text-base font-light text-my-gray3 mt-3">Starting price: <span class="text-my-violet font-normal">${{ lot.starting_price }}</span></p>
                 <p class="text-base font-light text-my-gray3 mt-1">{{ lot.bids_count }} bids</p>

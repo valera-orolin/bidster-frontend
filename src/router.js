@@ -10,6 +10,7 @@ import Profile from './Pages/Profile/Show.vue'
 import Auctions from './Pages/Auctions/Index.vue'
 import LotsEdit from './Pages/Lots/Edit.vue'
 import Bids from './Pages/Bids/Index.vue'
+import Bid from './Pages/Bids/Show.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -24,6 +25,7 @@ const routes = [
     { path: '/auctions', component: Auctions },
     { path: '/lots-edit', component: LotsEdit },
     { path: '/bids', component: Bids },
+    { path: '/bid', component: Bid },
 ]
 
 const router = createRouter({

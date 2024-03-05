@@ -39,6 +39,10 @@ export default {
             spacing: {
                 '0.5': '0.125rem',
             },
+            maxHeight: {
+                '200': '50rem',
+                '160': '40rem',
+            },
             height: {
                 '200': '50rem',
                 '160': '40rem',
