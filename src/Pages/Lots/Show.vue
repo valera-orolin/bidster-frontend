@@ -92,7 +92,9 @@ const person = {
                 <p class="text-base font-light text-my-gray3 mt-1">{{ lot.bids_count }} bids</p>
                 <p class="text-base font-light text-my-gray3 mt-1">Max bid: <span class="bg-my-violet py-1 px-2 rounded-xl font-normal">${{ lot.max_bid }}</span></p>
 
-                <ButtonGradient class="mt-8 w-56" :text="'Place a bid'" />
+                <router-link to="/bids/create">
+                    <ButtonGradient class="mt-8 w-56" :text="'Place a bid'" />
+                </router-link>
             </div>
         </div>
 

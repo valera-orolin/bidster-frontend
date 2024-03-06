@@ -122,13 +122,3 @@ onMounted(() => {
         </div>
     </AuthenticatedLayout>
 </template>
-
-<style>
-.file-upload input[type="file"] {
-  display: none;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
-</style>

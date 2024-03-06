@@ -1,7 +1,7 @@
 <script setup>
 import TextInput from '../../../Components/TextInput.vue';
 import ButtonWhite from '../../../Components/ButtonWhite.vue';
-import { ref, defineProps, watch } from 'vue';
+import { ref, watch } from 'vue';
 
 const categories = ref([
     { name: 'Real estate', subcategories: ['New buildings', 'Apartments', 'Rooms', 'Houses, dachas, cottages', 'Garages and parking lots', 'Sites', 'Commercial real estate'] },

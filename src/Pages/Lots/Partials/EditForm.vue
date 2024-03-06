@@ -220,3 +220,13 @@ const removeCharacteristic = (id) => {
         <button type="button" class="absolute top-0 right-0 m-4 text-white text-5xl" @click="showImageViewer = false">×</button>
     </div>
 </template>
+
+<style>
+.file-upload input[type="file"] {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+</style>
