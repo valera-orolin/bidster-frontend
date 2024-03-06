@@ -1,7 +1,7 @@
 <script setup>
-import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue'
+import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 import Auction from '../Auctions/Partials/Auction.vue';
-import Bid from '../Bids/Partials/Bid.vue'
+import Bid from '../Bids/Partials/Bid.vue';
 import { ref } from 'vue';
 
 const person = {
@@ -55,7 +55,12 @@ const selected = ref('option1');
                         <p class="text-base font-light text-my-gray3 mt-0.5">{{ person.rating }}</p>
                     </div>
                     <p class="text-base font-light text-my-gray3">{{ person.description }}</p>
-                    <p class="text-sm text-gray-500">{{ person.auctions }} auctions held</p>
+                    <div class="flex flex-row w-full justify-between">
+                        <p class="text-sm text-gray-500">{{ person.auctions }} auctions held</p>
+                        <router-link to="/profile/edit">
+                            <font-awesome-icon class="cursor-pointer hover:text-my-lila duration-500 transition text-xl" :icon="['fas', 'gear']" />
+                        </router-link>
+                    </div>
                 </div>
             </div>
         </div>

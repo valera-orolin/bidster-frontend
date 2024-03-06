@@ -31,6 +31,7 @@ const previousImage = () => {
 const lot = { 
   id: 1, 
   title: 'MacBook Pro 14', 
+  auction_status: 'Active',
   description: 'MacBook Pro 14-inch model. Equipped with Apples M1 Pro chip, it offers exceptional speed and power. Features a stunning Liquid Retina XDR display for vibrant colors and deep blacks. Comes with 16GB of memory and 512GB SSD. The battery life is phenomenal, perfect for on-the-go use. The laptop is in excellent condition, almost like new. A great deal for anyone in need of a high-performance machine.', 
   category: 'Electronics, Laptops', 
   bids_count: '18', 
@@ -95,6 +96,15 @@ const person = {
                 <router-link to="/bids/create">
                     <ButtonGradient class="mt-8 w-56" :text="'Place a bid'" />
                 </router-link>
+
+                <p class="font-light text-my-gray3 mt-3">
+                    Auction status: 
+                    <span :class="{
+                    'text-green-400': lot.auction_status === 'Active', 
+                    'text-orange-400': lot.auction_status === 'Finished', 
+                    'text-red-400': lot.auction_status === 'Failed'
+                    }">{{ lot.auction_status }}</span>
+                </p>
             </div>
         </div>
 

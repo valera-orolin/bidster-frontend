@@ -12,6 +12,7 @@ import LotsEdit from './Pages/Lots/Edit.vue'
 import Bids from './Pages/Bids/Index.vue'
 import Bid from './Pages/Bids/Show.vue'
 import CreateBid from './Pages/Bids/Create.vue'
+import EditProfile from './Pages/Profile/Edit.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -23,6 +24,7 @@ const routes = [
     { path: '/register', component: Register },
     { path: '/verify-email', component: VerifyEmail },
     { path: '/profile', component: Profile },
+    { path: '/profile/edit', component: EditProfile },
     { path: '/auctions', component: Auctions },
     { path: '/lots-edit', component: LotsEdit },
     { path: '/bids', component: Bids },
