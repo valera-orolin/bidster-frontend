@@ -40,10 +40,10 @@ const toggleMenu = () => {
     <div class="lg:hidden flex">
         <div id="menu" v-show="isOpen" class="absolute p-8 bg-my-gray2 border border-transparent text-my-gray3 rounded-2xl left-2 right-2 my-gradient-bord">
             <div class="space-y-6">
-                <a href="#" class="flex">Home</a>
-                <a href="#" class="flex">Pages</a>
-                <a href="#" class="flex">Feature</a>
-                <a href="#" class="flex">Cart</a>
+                <router-link to="/auctions" class="hover:text-my-lila transition duration-500 flex">My Auctions</router-link>
+                <router-link to="/bids" class="hover:text-my-lila transition duration-500 flex">My Bids</router-link>
+                <router-link to="/profile" class="hover:text-my-lila transition duration-500 flex">Profile</router-link>
+                <router-link to="/lots/create" class="hover:text-my-lila transition duration-500 flex">Create Auction</router-link>
             </div>
         </div>
     </div>
