@@ -10,7 +10,7 @@ const toggleMenu = () => {
 
 <template>
     <div class="bg-my-black flex items-center justify-between px-4 md:px-32 py-4 lg:py-6">
-        <router-link to="/lots">
+        <router-link to="/admin">
             <img src="../../assets/logo.png" alt="Bidster" class="h-8"/>
         </router-link>
 

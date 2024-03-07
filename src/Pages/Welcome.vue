@@ -5,15 +5,16 @@ import ButtonGradient from '../Components/ButtonGradient.vue';
 </script>
 
 <template>
-    <div class="flex h-screen">
+    <div class="flex min-h-screen">
         <div class="w-5/12 my-gradient p-10 pl-28 hidden lg:flex justify-start">
             <div class="relative">
                 <router-link to="/lots">
                     <img src="../assets/logo-dark.png" alt="Bidster" class="h-8" />
                 </router-link>
-                <div class="absolute bottom-0 left-0">
-                    <img class="scale-200 translate-x-10 -translate-y-44" src="../assets/element1.png" alt="" />
-                    <img class="scale-230 transform translate-x-52 -translate-y-88" src="../assets/element2.svg" alt="" />
+                <div class="absolute top-84 left-00">
+                    <img class="scale-200 translate-x-28" src="../assets/element1.png" alt="" />
+                    <!---
+                    <img class="scale-230 transform translate-x-52 -translate-y-88" src="../assets/element2.svg" alt="" />-->
                 </div>
             </div>
         </div>

@@ -40,6 +40,7 @@ export default {
             },
             spacing: {
                 '0.5': '0.125rem',
+                '84': '21rem',
             },
             maxHeight: {
                 '200': '50rem',
@@ -60,6 +61,11 @@ export default {
             },
             translate: {
                 '88': '22rem',
+                '108': '27rem',
+                '120': '30rem',
+                '144': '36rem',
+                '152': '38rem',
+                '160': '40rem',
             },
         },
       },

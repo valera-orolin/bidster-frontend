@@ -15,6 +15,9 @@ import CreateBid from './Pages/Bids/Create.vue'
 import EditProfile from './Pages/Profile/Edit.vue'
 import AdminWelcome from './Admin/Pages/Welcome.vue'
 import AdminAuctions from './Admin/Pages/Auctions/Index.vue'
+import AdminAuctionsEdit from './Admin/Pages/Auctions/Edit.vue'
+import AuctionBids from './Pages/Auctions/Bids.vue'
+import AdminAuctionBids from './Admin/Pages/Auctions/Bids.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -28,12 +31,15 @@ const routes = [
     { path: '/profile', component: Profile },
     { path: '/profile/edit', component: EditProfile },
     { path: '/auctions', component: Auctions },
-    { path: '/lots-edit', component: LotsEdit },
+    { path: '/lots/edit', component: LotsEdit },
     { path: '/bids', component: Bids },
     { path: '/bid', component: Bid },
     { path: '/bids/create', component: CreateBid },
     { path: '/admin/auctions', component: AdminAuctions },
     { path: '/admin', component: AdminWelcome },
+    { path: '/admin/auctions/edit', component: AdminAuctionsEdit },
+    { path: '/auctions/bids', component: AuctionBids },
+    { path: '/admin/auctions/bids', component: AdminAuctionBids },
 ]
 
 const router = createRouter({

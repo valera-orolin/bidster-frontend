@@ -24,6 +24,7 @@ const toggleSearchForm = () => {
         <template v-if="auctionsPage">
             <div class="w-full bg-my-gray2 mt-24 md:mt-28 text-center">
                 <div class="text-3xl md:text-6xl text-my-gray4 font-bold tracking-widest mt-12 md:mt-24">
+                    Manage
                     <span class="my-gradient-text">Auctions</span>
                 </div>
                 <button @click="toggleSearchForm" class="py-2 px-3 md:py-4 md:px-5 bg-my-black rounded-full text-my-gray3 text-lg md:text-xl mt-6 border border-my-black hover:border-my-lila transition duration-500" title="Show search form">

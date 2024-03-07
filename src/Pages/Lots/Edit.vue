@@ -2,6 +2,8 @@
 import ButtonArrow from '../../Components/ButtonArrow.vue';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue'
 import EditForm from './Partials/EditForm.vue';
+import ButtonWhite from '../../Components/ButtonWhite.vue';
+import ButtonLila from '../../Components/ButtonLila.vue';
 import { onMounted, ref } from 'vue';
 import { Chart, BarController, LinearScale, CategoryScale, BarElement } from 'chart.js';
 
@@ -115,7 +117,20 @@ onMounted(() => {
                             <canvas id="myChart" ref="chartContainer"></canvas>
                         </div>
 
-                        <ButtonArrow text="See the bids" :colorsInversed="true" />
+                        <router-link to="/auctions/bids">
+                            <ButtonArrow text="See the bids" :colorsInversed="true" />
+                        </router-link>
+                    </div>
+                </div>
+
+                <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-full lg:w-260">
+                    <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-10">
+                        End the auction
+                    </div>
+
+                    <div class="space-x-6">
+                        <ButtonLila text="Declare failure" />
+                        <ButtonWhite text="Declare finish" />
                     </div>
                 </div>
             </div>
