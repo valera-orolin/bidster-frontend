@@ -18,6 +18,8 @@ import AdminAuctions from './Admin/Pages/Auctions/Index.vue'
 import AdminAuctionsEdit from './Admin/Pages/Auctions/Edit.vue'
 import AuctionBids from './Pages/Auctions/Bids.vue'
 import AdminAuctionBids from './Admin/Pages/Auctions/Bids.vue'
+import AdminUsers from './Admin/Pages/Users/Index.vue'
+import AdminUsersEdit from './Admin/Pages/Users/Edit.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -40,6 +42,8 @@ const routes = [
     { path: '/admin/auctions/edit', component: AdminAuctionsEdit },
     { path: '/auctions/bids', component: AuctionBids },
     { path: '/admin/auctions/bids', component: AdminAuctionBids },
+    { path: '/admin/users', component: AdminUsers },
+    { path: '/admin/users/edit', component: AdminUsersEdit },
 ]
 
 const router = createRouter({
