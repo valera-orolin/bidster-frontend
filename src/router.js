@@ -13,6 +13,8 @@ import Bids from './Pages/Bids/Index.vue'
 import Bid from './Pages/Bids/Show.vue'
 import CreateBid from './Pages/Bids/Create.vue'
 import EditProfile from './Pages/Profile/Edit.vue'
+import AdminWelcome from './Admin/Pages/Welcome.vue'
+import AdminAuctions from './Admin/Pages/Auctions/Index.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -30,6 +32,8 @@ const routes = [
     { path: '/bids', component: Bids },
     { path: '/bid', component: Bid },
     { path: '/bids/create', component: CreateBid },
+    { path: '/admin/auctions', component: AdminAuctions },
+    { path: '/admin', component: AdminWelcome },
 ]
 
 const router = createRouter({
