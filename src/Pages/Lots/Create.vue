@@ -1,36 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue'
 import CreateForm from './Partials/CreateForm.vue';
-import { ref, watch } from 'vue';
-
-const fileCount = ref(0);
-
-const updateFileLabel = (event) => {
-  fileCount.value = event.target.files.length;
-};
-
-const categories = ref([
-    { name: 'Real estate', subcategories: ['New buildings', 'Apartments', 'Rooms', 'Houses, dachas, cottages', 'Garages and parking lots', 'Sites', 'Commercial real estate'] },
-    { name: 'Auto and spare parts', subcategories: ['Passenger cars', 'Spare parts', 'Trucks and buses', 'Motor vehicles', 'Agricultural machinery', 'Special equipment', 'Trailers', 'Water transport', 'Accessories', 'Tires, wheels', 'Tools, equipment'] },
-]);
-
-const selectedCategory = ref(categories.value[0]);
-const selectedSubcategory = ref('');
-watch(selectedCategory, (newVal) => {
-    selectedSubcategory.value = newVal.subcategories[0];
-});
-
-const characteristics = ref([]);
-let id = 0;
-const addCharacteristic = () => {
-    characteristics.value.push({ id: id++, name: '', value: '' });
-};
-const removeCharacteristic = (id) => {
-    const index = characteristics.value.findIndex(c => c.id === id);
-    if (index !== -1) {
-        characteristics.value.splice(index, 1);
-    }
-};
 </script>
 
 <template>
