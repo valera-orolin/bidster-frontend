@@ -24,6 +24,7 @@ import AdminCategories from './Admin/Pages/Categories/Index.vue'
 import AdminAnalysis from './Admin/Pages/Analysis/Index.vue'
 import AdminRequests from './Admin/Pages/Requests/Index.vue'
 import AdminRequestsAuctionsCreate from './Admin/Pages/Requests/CreateAuction.vue'
+import AdminRequestsAuctionsEdit from './Admin/Pages/Requests/EditAuction.vue'
 
 const routes = [
     { path: '/', component: Welcome },
@@ -51,6 +52,7 @@ const routes = [
     { path: '/admin/categories', component: AdminCategories },
     { path: '/admin/requests', component: AdminRequests },
     { path: '/admin/requests/auctions/create', component: AdminRequestsAuctionsCreate },
+    { path: '/admin/requests/auctions/edit', component: AdminRequestsAuctionsEdit },
     { path: '/admin/analysis', component: AdminAnalysis },
 ]
 

@@ -126,8 +126,8 @@ const person = {
             </div>
 
             <p class="text-2xl font-bold text-my-gray3 mt-14">Seller</p>
-            <router-link to="/profile">
-                <div class="flex flex-col space-y-4 mt-5 bg-my-gray2 rounded-2xl w-full lg:w-fit p-8 border-0.5 border-my-gray2 hover:border-my-gray-2 hover:bg-my-black transition duration-500 cursor-pointer lg:hover:-translate-y-1">
+            <div class="flex flex-col space-y-4 mt-5 bg-my-gray2 rounded-2xl w-full lg:w-fit p-8 border-0.5 border-my-gray2 hover:border-my-gray-2 hover:bg-my-black transition duration-500 cursor-pointer lg:hover:-translate-y-1">
+                <router-link to="/profile">
                     <div class="w-16 h-16 md:w-24 md:h-24 overflow-hidden rounded-2xl">
                         <img :src="person.avatar" alt="Avatar" class="object-cover min-w-full min-h-full">
                     </div>
@@ -142,9 +142,8 @@ const person = {
                         <p class="text-sm text-gray-500">{{ person.auctions }} auctions held</p>
                         <p class="text-base font-light text-my-gray3 lg:w-96">{{ person.description }}</p>
                     </div>
-                </div>
-            </router-link>
-
+                </router-link>
+            </div>
             <p class="text-2xl font-bold text-my-gray3 mt-14 mb-5">Chat about <span class="my-gradient-text">{{ lot.title }}</span></p>
             <Chat />
         </div>

@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <router-link :to="'/admin/requests/auctions/create'">
+    <router-link :to="'/admin/requests/auctions' + (request.type === 'Add' ? '/create' : '/edit')">
         <div class="p-4 text-my-gray4 rounded-2xl border-0.5 border-my-gray2 hover:border-my-lila transition duration-500 cursor-pointer lg:hover:-translate-y-1 flex items-center justify-between md:space-x-10">
             <div class="w-full">
                 <p class="text-sm font-light text-my-gray3 mb-4">

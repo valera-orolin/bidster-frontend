@@ -21,6 +21,5 @@ import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue'
                 </form>
             </div>
         </div>
-
     </AuthenticatedLayout>
 </template>
