@@ -39,7 +39,6 @@ const toggleSubcategories = (index) => {
 };
 
 const submitForm = () => {
-    // Здесь вы можете отправить массив категорий на сервер
     console.log(categories.value);
 };
 </script>
@@ -55,40 +54,42 @@ const submitForm = () => {
                     </div>
                     <form @submit.prevent="submitForm">
                         <div v-for="(category, index) in categories" :key="index">
-                            <div class="flex justify-between items-center mt-6">
+                            <div class="flex flex-col md:flex-row justify-between items-center mt-6">
                                 <TextInput
                                     type="text"
                                     @input="updateCategoryName(index, $event.target.value)"
                                     :defaultValue="category.name"
                                     placeholder="Category" 
-                                    class="block w-84 font-bold"
+                                    class="block w-full md:w-84 font-bold"
                                     required
                                     :colorsInversed="true"
                                 />
-                                <ButtonWhite type="button" @click="removeCategory(index)" text="Delete Category" />
+                                <ButtonWhite type="button" @click="removeCategory(index)" class="mt-3 md:mt-0" text="Delete Category" />
                             </div>
 
-                            <button @click="toggleSubcategories(index)" type="button" class="py-2 px-3 md:py-4 md:px-5 bg-my-black rounded-full text-my-gray3 text-lg md:text-xl mt-6 border border-my-black hover:border-my-lila transition duration-500" title="Show search form">
-                                <font-awesome-icon :icon="['fas', 'chevron-down']" />
+                            <button @click="toggleSubcategories(index)" type="button" class="py-2 px-3 md:py-4 md:px-5 bg-my-black rounded-full text-my-gray3 text-lg md:text-xl mt-3 border border-my-black hover:border-my-lila transition duration-500" title="Show search form">
+                                <font-awesome-icon :icon="['fas', category.showSubcategories ? 'chevron-up' : 'chevron-down']" />
                             </button>
 
-                            <div v-if="category.showSubcategories" v-for="(subcategory, subIndex) in category.subcategories" :key="subIndex" class="flex flex-row items-center mt-1 space-x-3">
-                                <TextInput
-                                    type="text"
-                                    @input="updateSubcategoryName(index, subIndex, $event.target.value)"
-                                    :defaultValue="subcategory"
-                                    placeholder="Subcategory"
-                                    class="block w-84"
-                                    required
-                                    :colorsInversed="true"
-                                />
-                                <button type="button" @click="removeSubcategory(index, subIndex)" class="text-2xl">×</button>
+                            <div v-if="category.showSubcategories" class="mt-3">
+                                <div v-for="(subcategory, subIndex) in category.subcategories" :key="subIndex" class="flex flex-row items-center mt-1 space-x-3">
+                                    <TextInput
+                                        type="text"
+                                        @input="updateSubcategoryName(index, subIndex, $event.target.value)"
+                                        :defaultValue="subcategory"
+                                        placeholder="Subcategory"
+                                        class="block w-full md:w-84"
+                                        required
+                                        :colorsInversed="true"
+                                    />
+                                    <button type="button" @click="removeSubcategory(index, subIndex)" class="text-2xl hover:text-my-lila tranition duration-500">×</button>
+                                </div>
                             </div>
-                            <ButtonWhite v-if="category.showSubcategories" type="button" @click="addSubcategory(index)" text="Add Subcategory" class="mt-1" />
+                            <ButtonWhite v-if="category.showSubcategories" type="button" @click="addSubcategory(index)" text="Add Subcategory" class="mt-3" />
                         </div>
-                        <div class="mt-6 flex flex-row items-center space-x-3">
-                            <ButtonWhite type="button" @click="addCategory" text="Add Category" />
-                            <ButtonLila type="submit" text="Submit" />
+                        <div class="mt-6 flex flex-col md:flex-row items-center md:space-x-3">
+                            <ButtonWhite type="button" @click="addCategory" class="w-full" text="Add Category" />
+                            <ButtonLila type="submit" class="mt-3 md:mt-0 w-full" text="Submit" />
                         </div>
                     </form>
                 </div>

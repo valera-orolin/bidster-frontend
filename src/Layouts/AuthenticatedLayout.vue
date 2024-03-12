@@ -27,7 +27,7 @@ const toggleSearchForm = () => {
                     <span class="my-gradient-text">Auctions</span>
                 </div>
                 <button @click="toggleSearchForm" class="py-2 px-3 md:py-4 md:px-5 bg-my-black rounded-full text-my-gray3 text-lg md:text-xl mt-6 border border-my-black hover:border-my-lila transition duration-500" title="Show search form">
-                    <font-awesome-icon :icon="['fas', 'chevron-down']" />
+                    <font-awesome-icon :icon="['fas', showSearchForm ? 'chevron-up' : 'chevron-down']" />
                 </button>
                 <SearchForm v-if="showSearchForm" />
                 <div class="mt-12 md:mb-24"></div>
