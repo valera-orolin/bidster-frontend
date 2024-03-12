@@ -18,6 +18,7 @@ const toggleMenu = () => {
             <router-link to="/admin/auctions" class="hover:text-my-lila transition duration-500">Auctions</router-link>
             <router-link to="/admin/users" class="hover:text-my-lila transition duration-500">Users</router-link>
             <router-link to="/admin/categories" class="hover:text-my-lila transition duration-500">Categories</router-link>
+            <router-link to="/admin/requests" class="hover:text-my-lila transition duration-500">Requests</router-link>
             <router-link to="/admin/analysis" class="hover:text-my-lila transition duration-500">Analysis</router-link>
             <router-link to="/login">
                 <ButtonGradient text="Sign in" />
@@ -43,6 +44,7 @@ const toggleMenu = () => {
                 <router-link to="/admin/auctions" class="hover:text-my-lila transition duration-500 flex">Auctions</router-link>
                 <router-link to="/admin/users" class="hover:text-my-lila transition duration-500 flex">Users</router-link>
                 <router-link to="/admin/categories" class="hover:text-my-lila transition duration-500 flex">Categories</router-link>
+                <router-link to="/admin/requests" class="hover:text-my-lila transition duration-500 flex">Requests</router-link>
                 <router-link to="/admin/analysis" class="hover:text-my-lila transition duration-500 flex">Analysis</router-link>
             </div>
         </div>

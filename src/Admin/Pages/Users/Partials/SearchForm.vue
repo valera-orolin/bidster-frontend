@@ -60,6 +60,7 @@ import ButtonWhite from '../../../../Components/ButtonWhite.vue';
                 <div class="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-6 items-start md:items-center mt-3">
                     <p>Profile status</p>
                     <select id="category" required class="w-64 p-5 rounded-full transition duration-500 bg-my-black focus:outline-none">
+                        <option value="All">All</option>
                         <option value="Active">Active</option>
                         <option value="Finished">Banned</option>
                     </select>
