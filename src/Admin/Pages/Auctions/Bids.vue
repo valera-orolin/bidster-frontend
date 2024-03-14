@@ -25,7 +25,7 @@ const auction_bids = ref([
         </template>
         
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Bid v-for="bid in auction_bids" :key="bid.id" :bid="bid" />
+            <Bid v-for="bid in auction_bids" :key="bid.id" :bid="bid" class="my-animation-in-up" />
         </div>
     </AuthenticatedLayout>
 </template>

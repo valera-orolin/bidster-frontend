@@ -8,18 +8,18 @@ import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue'
 
 <template>
     <AuthenticatedLayout>
-        <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 my-animation-in-up animation-lg">
             Old Version
         </div>
         <OldAuctionVersion />
 
-        <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 mt-24">
+        <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 mt-24 my-animation-in-up animation-lg">
             New Version
         </div>
         <NewAuctionVersion />
 
         <div class="flex justify-center">
-            <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-full lg:w-260">
+            <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-full lg:w-260 my-animation-in-up animation-lg">
                 <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
                     Manage Request
                 </div>

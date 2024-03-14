@@ -12,7 +12,7 @@ const requests = ref([
 <template>
     <AuthenticatedLayout :requestsPage="true">
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Request v-for="request in requests" :key="request.id" :request="request" />
+            <Request v-for="request in requests" :key="request.id" :request="request" class="my-animation-in-up" />
         </div>
     </AuthenticatedLayout>
 </template>

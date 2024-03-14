@@ -11,7 +11,7 @@ import ButtonGradient from '../Components/ButtonGradient.vue';
                 <router-link to="/lots">
                     <img src="../assets/logo-dark.png" alt="Bidster" class="h-8" />
                 </router-link>
-                <div class="absolute top-84 left-00">
+                <div class="absolute top-84 left-00 my-animation-in-up">
                     <img class="scale-200 translate-x-28" src="../assets/element1.png" alt="" />
                     <!---
                     <img class="scale-230 transform translate-x-52 -translate-y-88" src="../assets/element2.svg" alt="" />-->
@@ -19,7 +19,7 @@ import ButtonGradient from '../Components/ButtonGradient.vue';
             </div>
         </div>
         <div class="w-full lg:w-7/12 bg-my-black p-10 flex flex-col justify-between items-start relative">
-            <div class="w-full lg:w-3/4">
+            <div class="w-full lg:w-3/4 my-animation-in-up animation-md">
                 <div class="text-my-gray4 text-3xl lg:text-6xl font-bold mt-20 lg:mt-36 leading-tight">
                     Buy and sell anything securely with
                     <span class="my-gradient-text">Bidster</span>

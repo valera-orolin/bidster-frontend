@@ -1,12 +1,9 @@
 <script setup>
+import ButtonWhite from '../../../../Components/ButtonWhite.vue';
 import { ref } from 'vue';
 
 let showImageViewer = ref(false);
 let currentImageIndex = ref(0);
-
-const openImage = () => {
-  showImageViewer.value = true;
-};
 
 const nextImage = () => {
   if (currentImageIndex.value < lot.images.length - 1) {
@@ -63,9 +60,10 @@ const person = {
 </script>
 
 <template>
-    <div class="flex flex-col lg:flex-row">
+    <div class="my-animation-in-up animation-lg">
+        <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col items-start">
-                <img :src="lot.images[currentImageIndex]" alt="Lot image" class="w-full h-56 md:h-72 lg:w-200 lg:h-112 object-cover rounded-2xl cursor-zoom-in" @click="openImage" />
+                <img :src="lot.images[currentImageIndex]" alt="Lot image" class="w-full h-56 md:h-72 lg:w-200 lg:h-112 object-cover rounded-2xl" />
                 <div class="flex justify-between w-full mt-4">
                     <ButtonWhite text="❮" @click="previousImage" />
                     <ButtonWhite text="❯" @click="nextImage" />
@@ -81,11 +79,6 @@ const person = {
 
                 <p class="text-base font-light text-my-gray3 mt-3">Starting price: <span class="text-my-violet font-normal">${{ lot.starting_price }}</span></p>
             </div>
-        </div>
-
-        <div v-if="showImageViewer" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <img :src="lot.images[currentImageIndex]" class="max-h-screen max-w-screen" />
-            <button class="absolute top-0 right-0 m-4 text-white text-5xl" @click="showImageViewer = false">×</button>
         </div>
 
         <div class="flex flex-col">
@@ -120,4 +113,5 @@ const person = {
                 </router-link>
             </div>
         </div>
+    </div>
 </template>

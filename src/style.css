@@ -27,3 +27,33 @@
       linear-gradient(theme('colors.my-black'), theme('colors.my-black')) padding-box,
       linear-gradient(224deg, theme('colors.primary2') 15%, theme('colors.primary3') 34%, theme('colors.primary4') 58%, theme('colors.primary5') 77%, theme('colors.primary2') 96%) border-box;
 }
+
+:root {
+    --animation-distance: 10%;
+}
+  
+@keyframes myAnimation {
+    0% {
+      opacity: .3;
+      transform: translate3d(0, var(--animation-distance), 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.my-animation-in-up {
+    animation: myAnimation .5s ease-out both;
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    will-change: opacity, transform;
+}
+
+.animation-lg {
+    --animation-distance: 20px;
+}
+
+.animation-md {
+    --animation-distance: 4%;
+}  

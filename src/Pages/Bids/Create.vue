@@ -4,6 +4,7 @@ import TextInput from '../../Components/TextInput.vue'
 import InputError from '../../Components/InputError.vue'
 import InputLabel from '../../Components/InputLabel.vue'
 import ButtonGradient from '../../Components/ButtonGradient.vue';
+import ButtonArrow from '../../Components/ButtonArrow.vue';
 import { onMounted, ref } from 'vue';
 import { Chart, BarController, LinearScale, CategoryScale, BarElement } from 'chart.js';
 
@@ -58,16 +59,17 @@ onMounted(() => {
 <template>
     <AuthenticatedLayout>
         <div class="flex justify-center">
-
-            <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-full lg:w-260">
+            <div class="border-2 border-transparent rounded-2xl my-gradient-bord p-4 lg:p-12 text-my-gray4 lg:my-12 w-full lg:w-260 my-animation-in-up animation-md">
                 <div class="text-my-gray4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-10">
                     Place a bid on 
-                    <router-link to="/lots/1">
-                        <span class="my-gradient-text">{{ auction.title }}</span>
-                    </router-link>
+                    <span class="my-gradient-text">{{ auction.title }}</span>
                 </div>
 
-                <div class="space-y-6">
+                <router-link to="/lots/1">
+                    <ButtonArrow text="See the lot" :colorsInversed="true" />
+                </router-link>
+
+                <div class="space-y-6 mt-10">
                     <p class="font-light text-my-gray3 mb-4">
                         Auction status: 
                         <span :class="{
@@ -79,6 +81,11 @@ onMounted(() => {
                     <p class="font-light text-my-gray3">Bids count: {{ auction.bids_count }}</p>
                     <p class="font-light text-my-gray3">Starting price: ${{ auction.starting_price }}</p>
                     <p class="font-light text-my-gray3">Max bid: ${{ auction.max_bid }}</p>
+                    <div>
+                        <router-link to="/auctions/bids">
+                            <p class="font-light text-my-gray3 tracking-widest underline hover:text-my-lila cursor-pointer duration-500 transition">See the bids</p>
+                        </router-link>
+                    </div>
 
                     <div class="w-72 md:w-160 lg:w-full">
                         <canvas id="myChart" ref="chartContainer"></canvas>

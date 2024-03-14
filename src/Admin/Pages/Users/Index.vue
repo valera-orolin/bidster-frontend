@@ -16,7 +16,7 @@ const users = ref([
 <template>
     <AuthenticatedLayout :usersPage="true">
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <User v-for="user in users" :key="user.id" :user="user" />
+            <User v-for="user in users" :key="user.id" :user="user" class="my-animation-in-up" />
         </div>
     </AuthenticatedLayout>
 </template>

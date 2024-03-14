@@ -20,7 +20,7 @@ const auctions = ref([
 <template>
     <AuthenticatedLayout :auctionsPage="true">
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Auction v-for="auction in auctions" :key="auction.id" :auction="auction" />
+            <Auction v-for="auction in auctions" :key="auction.id" :auction="auction" class="my-animation-in-up" />
         </div>
     </AuthenticatedLayout>
 </template>
