@@ -56,4 +56,34 @@
 
 .animation-md {
     --animation-distance: 4%;
-}  
+}
+  
+.slide-enter-active {
+    animation: slide-in .5s forwards;
+}
+
+.slide-leave-active {
+    animation: slide-out .5s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+}

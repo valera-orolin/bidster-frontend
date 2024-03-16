@@ -45,9 +45,17 @@ const toggleSearchForm = () => {
                         <font-awesome-icon :icon="['fas', showSearchForm ? 'chevron-up' : 'chevron-down']" />
                     </button>
 
-                    <AuctionsSearchForm v-if="showSearchForm && auctionsPage" />
-                    <UsersSearchForm v-if="showSearchForm && usersPage" />
-                    <RequestsSearchForm v-if="showSearchForm && requestsPage" />
+                    <transition name="slide">
+                        <AuctionsSearchForm v-if="showSearchForm && auctionsPage" />
+                    </transition>
+
+                    <transition name="slide">
+                        <UsersSearchForm v-if="showSearchForm && usersPage" />
+                    </transition>
+
+                    <transition name="slide">
+                        <RequestsSearchForm v-if="showSearchForm && requestsPage" />
+                    </transition>
 
                     <div class="mt-12 md:mb-24"></div>
                 </div>
